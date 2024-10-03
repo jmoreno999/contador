@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
             seedColor: const Color.fromARGB(255, 27, 123, 92)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Hola mundo!'),
+
+      home: const MyHomePage(title: 'Contador'),
+
     );
   }
 }
@@ -46,11 +48,14 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+
   void _resetCounter() {
     setState(() {
       _counter = 0;
     });
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -81,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(fontSize: 35),
               ),
             ),
+
             FloatingActionButton(
               onPressed: _resetCounter,
               child: Text(
@@ -88,6 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(fontSize: 25),
               ),
             ),
+
           ],
         ),
       ),
