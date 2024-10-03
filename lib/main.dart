@@ -46,6 +46,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _resetCounter() {
+    setState(() {
+      _counter = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,6 +79,13 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text(
                 '+',
                 style: TextStyle(fontSize: 35),
+              ),
+            ),
+            FloatingActionButton(
+              onPressed: _resetCounter,
+              child: Text(
+                'r',
+                style: TextStyle(fontSize: 25),
               ),
             ),
           ],
